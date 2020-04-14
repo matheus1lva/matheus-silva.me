@@ -1,0 +1,28 @@
+name: Cumprimentar a Todos
+# Este fluxo de trabalho é acionado em pushes para o repositório.
+on: [push]
+
+jobs:
+  build:
+    # o nome do trabalho é greeting (cumprimentar)
+    name: build
+    # Este trabalho executa no Linux
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - run: npm install
+      - run: npm run build
+  deploy: 
+    runs-on: ubuntu-latest
+    name: deploy
+    steps: 
+      - uses: amondnet/now-deployment@v2
+        with:
+          zeit-token: ${{ secrets.ZEIT_TOKEN }} # Required
+          github-token: ${{ secrets.GITHUB_TOKEN }} #Optional 
+          now-args: '--prod' #Optional
+          now-org-id: ${{ secrets.ORG_ID}}  #Required
+          now-project-id: ${{ secrets.PROJECT_ID}} #Required 

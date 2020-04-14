@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Matheus Silva Blog`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Matheus Gonçalves da Silva`,
+      summary: 'Lives in brazil willing to take over the whole world!!!! \o/',
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    description: `i wrote about what bothers me, what i learn and what i know!`,
+    siteUrl: `https://matheus-silva.now.sh`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `matheus1lva`,
     },
   },
   plugins: [

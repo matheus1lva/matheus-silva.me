@@ -873,6 +873,19 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@deckdeckgo/highlight-code@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@deckdeckgo/highlight-code/-/highlight-code-1.0.2.tgz#6f7a73e49c27887e03a0fd1d24587592f2960abc"
+  integrity sha512-lxDy2uA+hPQiPxO9y/JUgwPdp6ClJ6FQbAyFMeMednleG+MzICDwhn9BAQh1VLkb2ksb130dSOQlvaOhVxcvbg==
+  dependencies:
+    "@deckdeckgo/utils" "1.0.0"
+    prismjs "^1.19.0"
+
+"@deckdeckgo/utils@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@deckdeckgo/utils/-/utils-1.0.0.tgz#34be3df746525e4db1b6bc1d62b96d2214f8820a"
+  integrity sha512-yqbie3n3JDGU338MS9NNfAseQfPVamqC0m/Y1U8fSh7ZKSzSRCU/899nkpma9DZEg16v8vld8vnpImGrzkFSHg==
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
@@ -5538,6 +5551,15 @@ gatsby-link@^2.3.2:
     "@types/reach__router" "^1.3.3"
     prop-types "^15.7.2"
 
+gatsby-node-helpers@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-node-helpers/-/gatsby-node-helpers-0.3.0.tgz#3bdca3b7902a702a5834fef280ad66d51099d57c"
+  integrity sha1-O9yjt5AqcCpYNP7ygK1m1RCZ1Xw=
+  dependencies:
+    json-stringify-safe "^5.0.1"
+    lodash "^4.17.4"
+    p-is-promise "^1.1.0"
+
 gatsby-page-utils@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/gatsby-page-utils/-/gatsby-page-utils-0.1.1.tgz#f93ed3fd11c96944f888e9d85abdb7b83af927d6"
@@ -5668,6 +5690,16 @@ gatsby-remark-copy-linked-files@^2.2.1:
     path-is-inside "^1.0.2"
     probe-image-size "^4.1.1"
     unist-util-visit "^1.4.1"
+
+gatsby-remark-highlight-code@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-highlight-code/-/gatsby-remark-highlight-code-1.2.1.tgz#8ce29af8835da1634da22aa358aeb7b16d948306"
+  integrity sha512-NYnHaBnDCDUmMLeY9ByCbE+9awisHeYyailT59hm4rykW79VE6GNErzU2NMfZ/y+Pf8AG6gasNrA2W3tj/0XIg==
+  dependencies:
+    gatsby-node-helpers "^0.3.0"
+    lodash "^4.17.15"
+    mdast-util-to-string "^1.1.0"
+    unist-util-visit "^2.0.2"
 
 gatsby-remark-images@^3.2.1:
   version "3.2.1"
@@ -12854,7 +12886,7 @@ unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.4.1:
   dependencies:
     unist-util-visit-parents "^2.0.0"
 
-unist-util-visit@^2.0.0:
+unist-util-visit@^2.0.0, unist-util-visit@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-2.0.2.tgz#3843782a517de3d2357b4c193b24af2d9366afb7"
   integrity sha512-HoHNhGnKj6y+Sq+7ASo2zpVdfdRifhTgX2KTU3B/sO/TTlZchp7E3S4vjRzDJ7L60KmrCPsQkVK3lEF3cz36XQ==

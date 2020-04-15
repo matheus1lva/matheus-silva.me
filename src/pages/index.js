@@ -1,4 +1,5 @@
 import React from "react"
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
@@ -7,6 +8,7 @@ import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
 const BlogIndex = ({ data, location }) => {
+  deckDeckGoHighlightElement();
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
 

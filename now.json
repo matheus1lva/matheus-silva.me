@@ -1,0 +1,15 @@
+{
+    "name": "zeit-now-deployment",
+    "version": 2,
+    "scope": "matheusgsilva",
+    "public": false,
+    "github": {
+      "enabled": false
+    },
+    "builds": [
+      { "src": "./public/**", "use": "@now/static" }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "public/$1" }
+    ]
+  }

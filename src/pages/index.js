@@ -12,6 +12,13 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
 
+  const sc = document.createElement("script");
+  sc.setAttribute("src", "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js");
+  sc.setAttribute("type", "text/javascript");
+  sc.setAttribute('data-ad-client', "ca-pub-1493876272753623")
+  sc.setAttribute("async");
+  document.head.appendChild(sc);
+
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />

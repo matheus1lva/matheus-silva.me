@@ -34,9 +34,6 @@ const SEO = ({ description, lang, meta, title }) => {
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
-      script={[
-        <script data-ad-client="ca-pub-1493876272753623" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      ]}
       meta={[
         {
           name: `description`,

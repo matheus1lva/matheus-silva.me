@@ -4,7 +4,6 @@ import Header from "./Header"
 import { rhythm } from "../utils/typography"
 
 const Layout = ({ location, title, children }) => {
-  
   return (
     <div
       style={{
@@ -16,9 +15,7 @@ const Layout = ({ location, title, children }) => {
     >
       <Header location={location} title={title} />
       <main>{children}</main>
-      <footer>
-        Made with love with Gatsby {'<'}3
-      </footer>
+      <footer>Made with love with Gatsby {"<"}3</footer>
     </div>
   )
 }

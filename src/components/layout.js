@@ -1,7 +1,7 @@
 import React from "react"
 import Header from "./Header"
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 
 const Layout = ({ location, title, children }) => {
   

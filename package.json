@@ -46,7 +46,7 @@
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run format"
+      "pre-commit": "npm run format && git add ."
     }
   }
 }

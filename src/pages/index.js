@@ -1,6 +1,6 @@
 import React from "react"
-import { Helmet } from 'react-helmet';
-import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
+import { Helmet } from "react-helmet"
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
@@ -9,17 +9,19 @@ import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
 const BlogIndex = ({ data, location }) => {
-  deckDeckGoHighlightElement();
+  deckDeckGoHighlightElement()
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
-
-
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Helmet>
-        <script data-ad-client="ca-pub-1493876272753623" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script
+          data-ad-client="ca-pub-1493876272753623"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        ></script>
       </Helmet>
       <Bio />
       {posts.map(({ node }) => {

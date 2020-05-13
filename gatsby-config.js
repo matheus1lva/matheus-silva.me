@@ -3,7 +3,7 @@ module.exports = {
     title: `Matheus Silva Blog`,
     author: {
       name: `Matheus Gonçalves da Silva`,
-      summary: 'Lives in brazil willing to take over the whole world!!!! \o/',
+      summary: "Lives in brazil willing to take over the whole world!!!! o/",
     },
     description: `i wrote about what bothers me, what i learn and what i know!`,
     siteUrl: `https://matheus-silva.now.sh`,
@@ -18,7 +18,7 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-highlight-code`
+            resolve: `gatsby-remark-highlight-code`,
           },
         ],
       },

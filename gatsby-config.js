@@ -12,7 +12,7 @@ module.exports = {
     },
   },
   plugins: [
-    'gatsby-plugin-twitter',
+    "gatsby-plugin-twitter",
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -41,6 +41,19 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: "gatsby-remark-embed-gist",
+            options: {
+              // Optional:
+
+              // the github handler whose gists are to be accessed
+              username: "weirdpattern",
+
+              // a flag indicating whether the github default gist css should be included or not
+              // default: true
+              includeDefaultCss: true,
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {

@@ -24,4 +24,4 @@ I submitted my talk in March 2019, met my girlfriend and everything started to a
 
 Something I always say and you should follow.
 
-__Set a goal, as small as it may sound, progress will boost your self-esteem and more things will come__
+**Set a goal, as small as it may sound, progress will boost your self-esteem and more things will come**

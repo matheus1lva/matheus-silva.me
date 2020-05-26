@@ -32,10 +32,20 @@ My goal is to instruct and even create pull requests that fixes those types of e
 
 There are many features I want to add in the feature, which are:
 
-1. Roadmap
-2. Add support for GitHub action
-3. Add a custom CI/CD reporter
-4. CI/CD for GitHub pull requests and merges
-5. Add support for multiple and custom reporters
+# Roadmap
+
+1. Add support for GitHub action
+2. Add a custom CI/CD reporter
+3. CI/CD for GitHub pull requests and merges
+4. Add support for multiple and custom reporters
+5. pre-commit hook
+6. Purge CLI tool!
+7. automated bot reporter (to open Pull requests on each repository)
+
+I would say that there is much more that can be done, there are tools around that claims to "clean" your `node_modules` but ends up doing more harm than good or many are not perfect! There is a friend which have run one of these purge clis, but his `eslint` binary was deleted `lol`! There is something I'm looking aswell!
+
+There is much more! Going even further i see in the forseable future a CDN like/provider similar to `unpkg` or `pika` where we have the options for each package to have published its own optimized/non-optimized version of it where users from deno, npm, yarn, anyone can consume from!
+
+Have a look and if needed open an issue and I'll be pleased to help!
 
 I hope to help everyone in this process, so we all have a smaller node_modules size, which is the price paid while developing `javascript` nowadays!

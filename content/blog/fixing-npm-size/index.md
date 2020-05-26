@@ -34,13 +34,16 @@ There are many features I want to add in the feature, which are:
 
 # Roadmap
 
+0. look for positives for `src` folder
 1. Add support for GitHub action
-2. Add a custom CI/CD reporter
-3. CI/CD for GitHub pull requests and merges
-4. Add support for multiple and custom reporters
-5. pre-commit hook
-6. Purge CLI tool!
-7. automated bot reporter (to open Pull requests on each repository)
+1. Add a custom CI/CD reporter
+1. CI/CD for GitHub pull requests and merges
+1. Add support for multiple and custom reporters
+1. pre-commit hook
+1. Purge CLI tool!
+1. automated bot reporter (to open Pull requests on each repository)
+
+The step 0 is something I'm currently developing and it is not as straight forward as it sounds. We need to look into the `main`, `browser` and `module` fields inside the `package.json` file in order to validate if the src folder being published is a defect or not! This will come ASAP!
 
 I would say that there is much more that can be done, there are tools around that claims to "clean" your `node_modules` but ends up doing more harm than good or many are not perfect! There is a friend which have run one of these purge clis, but his `eslint` binary was deleted `lol`! There is something I'm looking aswell!
 

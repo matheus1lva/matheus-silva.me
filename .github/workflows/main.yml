@@ -1,4 +1,4 @@
-name: Cumprimentar a Todos
+name: build my blog now!
 # Este fluxo de trabalho é acionado em pushes para o repositório.
 on: [push]
 

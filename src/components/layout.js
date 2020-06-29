@@ -15,7 +15,7 @@ const Layout = ({ location, title, children }) => {
     >
       <Header location={location} title={title} />
       <main>{children}</main>
-      <footer>Made with love with Gatsby {"<"}3</footer>
+      <footer>Matheus Silva - Made with love with Gatsby {"<"}3</footer>
     </div>
   )
 }

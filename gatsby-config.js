@@ -105,7 +105,7 @@ module.exports = {
       options: {
         // Domatin ID found when adding a domain in the admin panel.
         domainId: '3862746f-a35d-4056-b343-65195a6086c0',
-        server: 'https://https://analytics-do-meu-site.herokuapp.com/',
+        server: 'https://analytics-do-meu-site.herokuapp.com/',
         // Disabled analytic tracking when running localy
         ignoreLocalhost: true,
         // If enabled it will collect info on OS, BrowserInfo, Device  & ScreenSize

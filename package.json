@@ -35,6 +35,7 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
+    "gatsby-plugin-ackee-tracker": "^2.0.1",
     "ghooks": "^2.0.4",
     "prettier": "^1.19.1"
   },

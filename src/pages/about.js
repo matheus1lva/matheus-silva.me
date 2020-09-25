@@ -10,7 +10,7 @@ const AboutPage = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="About" />
-      <div style={{ marginTop: `30px`, fontFamily: `Montserrat` }}>
+      <div style={{ marginTop: `30px`}}>
         <h4>Who am i</h4>
         <p>
           I'm a open source oriented developer, i tend to whatever i do think

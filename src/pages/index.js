@@ -17,11 +17,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Helmet>
-        <script
-          data-ad-client="ca-pub-1493876272753623"
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-        ></script>
+        <script data-ad-client="ca-pub-1493876272753623" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       </Helmet>
       <Bio />
       {posts.map(({ node }) => {

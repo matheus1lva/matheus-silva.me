@@ -8,6 +8,13 @@
 
 /* Write you own custom component styles here */
 
+<<<<<<< HEAD
+=======
+html {
+	font-family: 'Merriweather','Georgia',serif;
+}
+
+>>>>>>> b8ced84... add something
 /* Start purging... */
 @tailwind utilities;
 /* Stop purging. */

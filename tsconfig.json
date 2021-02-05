@@ -3,12 +3,8 @@
     "target": "es5",
     "module": "esnext",
     "jsx": "preserve",
-<<<<<<< HEAD
-    "strict": true,
-=======
     "strict": false,
     "noImplicitAny": false,
->>>>>>> b8ced84... add something
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,

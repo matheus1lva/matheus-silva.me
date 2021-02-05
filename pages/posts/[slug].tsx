@@ -1,54 +1,72 @@
-import { useRouter } from 'next/router'
-import ErrorPage from 'next/error'
-import Container from '../../components/container'
-import PostBody from '../../components/post-body'
-import Header from '../../components/header'
-import PostHeader from '../../components/post-header'
-import Layout from '../../components/layout'
-import { getPostBySlug, getAllPosts } from '../../lib/api'
-import PostTitle from '../../components/post-title'
-import Head from 'next/head'
-import { CMS_NAME } from '../../lib/constants'
-import markdownToHtml from '../../lib/markdownToHtml'
-import PostType from '../../types/post'
+import { useRouter } from "next/router"
+import ErrorPage from "next/error"
+import Layout from "../../components/layout"
+import { getPostBySlug, getAllPosts } from "../../lib/api"
+import Head from "next/head"
+import { CMS_NAME } from "../../lib/constants"
+import markdownToHtml from "../../lib/markdownToHtml"
+import PostType from "../../types/post"
+import { rhythm, scale } from "../../components/utils/typography"
+import Bio from "../../components/Bio"
 
 type Props = {
   post: PostType
-  morePosts: PostType[]
+  morePosts?: PostType[]
   preview?: boolean
 }
 
-const Post = ({ post, morePosts, preview }: Props) => {
-  const router = useRouter()
+const Post = (props: Props) => {
+  const { post, morePosts, preview } = props;
+
+  const router = useRouter();
+
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
+
   return (
-    <Layout preview={preview}>
-      <Container>
-        <Header />
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-            <article className="mb-32">
-              <Head>
+    <Layout>
+      {router.isFallback ? (
+        <h1>Loading…</h1>
+      ) : (
+        <>
+            <article>
+            <Head>
                 <title>
                   {post.title} | Next.js Blog Example with {CMS_NAME}
                 </title>
-                <meta property="og:image" content={post.ogImage.url} />
               </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-              />
-              <PostBody content={post.content} />
-            </article>
-          </>
-        )}
-      </Container>
+            <header>
+              <h1
+                style={{
+                  marginTop: rhythm(1),
+                  marginBottom: 0,
+                }}
+              >
+                {post.title}
+              </h1>
+              <p
+                style={{
+                  ...scale(-1 / 5),
+                  display: `block`,
+                  marginBottom: rhythm(1),
+                }}
+              >
+                {post.date}
+              </p>
+            </header>
+            <section dangerouslySetInnerHTML={{ __html: post.content }} />
+            <hr
+              style={{
+                marginBottom: rhythm(1),
+              }}
+            />
+            <footer>
+              <Bio />
+            </footer>
+          </article>
+        </>
+      )}
     </Layout>
   )
 }
@@ -63,15 +81,15 @@ type Params = {
 
 export async function getStaticProps({ params }: Params) {
   const post = getPostBySlug(params.slug, [
-    'title',
-    'date',
-    'slug',
-    'author',
-    'content',
-    'ogImage',
-    'coverImage',
+    "title",
+    "date",
+    "slug",
+    "author",
+    "content",
+    "ogImage",
+    "coverImage",
   ])
-  const content = await markdownToHtml(post.content || '')
+  const content = await markdownToHtml(post.content || "")
 
   return {
     props: {
@@ -84,10 +102,10 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug'])
+  const posts = getAllPosts(["slug"])
 
   return {
-    paths: posts.map((posts) => {
+    paths: posts.map(posts => {
       return {
         params: {
           slug: posts.slug,

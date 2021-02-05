@@ -1,22 +1,3 @@
-@tailwind base;
-
-/* Write your own custom base styles here */
-
-/* Start purging... */
-@tailwind components;
-/* Stop purging. */
-
-/* Write you own custom component styles here */
-
-<<<<<<< HEAD
-=======
 html {
 	font-family: 'Merriweather','Georgia',serif;
 }
-
->>>>>>> b8ced84... add something
-/* Start purging... */
-@tailwind utilities;
-/* Stop purging. */
-
-/* Your own custom utilities */

@@ -3,21 +3,22 @@
   "private": true,
   "version": "0.1.0",
   "dependencies": {
+    "@deckdeckgo/highlight-code": "^1.0.2",
     "classnames": "2.2.6",
     "date-fns": "2.10.0",
     "gray-matter": "4.0.2",
     "next": "latest",
-    "remark": "11.0.2",
-    "remark-html": "10.0.0",
-    "typescript": "^4.0.3",
-    "@deckdeckgo/highlight-code": "^1.0.2",
     "prismjs": "^1.19.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
+    "remark": "11.0.2",
+    "remark-html": "10.0.0",
+    "styled-components": "^5.2.1",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75",
+    "typescript": "^4.0.3",
     "typography": "^0.16.19",
     "typography-theme-wordpress-2016": "^0.16.19"
   },
@@ -28,7 +29,8 @@
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
     "ghooks": "^2.0.4",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "babel-plugin-styled-components": "latest"
   },
   "scripts": {
     "dev": "next",

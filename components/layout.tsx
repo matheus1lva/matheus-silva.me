@@ -1,29 +1,10 @@
-<<<<<<< HEAD
-import Alert from './alert'
-import Footer from './footer'
-import Meta from './meta'
-
-type Props = {
-  preview?: boolean
-  children: React.ReactNode
-}
-
-const Layout = ({ preview, children }: Props) => {
-  return (
-    <>
-      <Meta />
-      <div className="min-h-screen">
-        <Alert preview={preview} />
-        <main>{children}</main>
-      </div>
-      <Footer />
-    </>
-=======
 import React from "react"
+import Header from "./Header"
 
 import { rhythm } from "./utils/typography"
 
-const Layout = ({ location, title, children }) => {
+const Layout = (props: React.PropsWithChildren<{}>) => {
+  const { children } = props;
   return (
     <div
       style={{
@@ -33,10 +14,10 @@ const Layout = ({ location, title, children }) => {
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
+      <Header />
       <main>{children}</main>
       <footer>Matheus Silva - Made with love with Gatsby {"<"}3</footer>
     </div>
->>>>>>> b8ced84... add something
   )
 }
 

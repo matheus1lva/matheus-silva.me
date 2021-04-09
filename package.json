@@ -5,7 +5,7 @@
   "dependencies": {
     "@deckdeckgo/highlight-code": "^1.0.2",
     "classnames": "2.2.6",
-    "date-fns": "2.10.0",
+    "date-fns": "^2.20.1",
     "gray-matter": "4.0.2",
     "next": "latest",
     "prismjs": "^1.19.0",
@@ -28,9 +28,9 @@
     "@types/node": "^14.0.1",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
+    "babel-plugin-styled-components": "latest",
     "ghooks": "^2.0.4",
-    "prettier": "^1.19.1",
-    "babel-plugin-styled-components": "latest"
+    "prettier": "^1.19.1"
   },
   "scripts": {
     "dev": "next",

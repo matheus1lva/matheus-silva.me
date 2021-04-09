@@ -1,8 +1,9 @@
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import { getAllPosts } from '../lib/api'
 import Link from 'next/link'
 import Post from '../types/post'
 import { rhythm } from '../components/utils/typography'
+import { format } from 'date-fns';
 // custom typefaces
 import "typeface-montserrat"
 import "typeface-merriweather"
@@ -14,7 +15,6 @@ interface Props {
 
 const Index = (props: Props) => {
   const { allPosts } = props;
-  console.log(allPosts)
   return (
     <Layout>
       {allPosts.map((post) => {
@@ -27,11 +27,11 @@ const Index = (props: Props) => {
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <Link href={`/${post.slug}`}>
+                <Link href={`/posts/${post.slug}`}>
                   {title}
                 </Link>
               </h3>
-              <small>{post.date}</small>
+              <small>{format(new Date(post.date), 'yyyy-mm-ddd')}</small>
             </header>
             <section>
               <p>{post.description}</p>

@@ -1,6 +1,6 @@
 import { useRouter } from "next/router"
 import ErrorPage from "next/error"
-import Layout from "../../components/layout"
+import Layout from "../../components/Layout"
 import { getPostBySlug, getAllPosts } from "../../lib/api"
 import Head from "next/head"
 import { CMS_NAME } from "../../lib/constants"
@@ -8,6 +8,7 @@ import markdownToHtml from "../../lib/markdownToHtml"
 import PostType from "../../types/post"
 import { rhythm, scale } from "../../components/utils/typography"
 import Bio from "../../components/Bio"
+import { format } from 'date-fns';
 
 type Props = {
   post: PostType
@@ -52,7 +53,7 @@ const Post = (props: Props) => {
                   marginBottom: rhythm(1),
                 }}
               >
-                {post.date}
+                {format(new Date(post.date), 'yyyy-mm-dd')}
               </p>
             </header>
             <section dangerouslySetInnerHTML={{ __html: post.content }} />

@@ -1,6 +1,6 @@
 import React from "react"
 import Header from "./Header"
-
+import Bio from './Bio';
 import { rhythm } from "./utils/typography"
 
 const Layout = (props: React.PropsWithChildren<{}>) => {
@@ -15,6 +15,7 @@ const Layout = (props: React.PropsWithChildren<{}>) => {
       }}
     >
       <Header />
+      <Bio />
       <main>{children}</main>
       <footer>Matheus Silva - Made with love with Gatsby {"<"}3</footer>
     </div>

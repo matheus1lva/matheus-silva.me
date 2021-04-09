@@ -1,16 +1,10 @@
 import React from "react"
-import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-
-const AboutPage = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
-
+import Layout from "../components/Layout"
+const AboutPage = () => {
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title="About" />
-      <div style={{ marginTop: `30px` }}>
+    <Layout>
+      <div style={{ marginTop: `30px`, fontFamily: `Montserrat` }}>
         <h4>Who am i</h4>
         <p>
           I'm a open source oriented developer, i tend to whatever i do think
@@ -41,28 +35,3 @@ const AboutPage = ({ data, location }) => {
 }
 
 export default AboutPage
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
-        }
-      }
-    }
-  }
-`

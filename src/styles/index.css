@@ -19,3 +19,11 @@
 * {
 	font-family: 'Merriweather', Georgia ,serif;
 }
+
+a {
+	color: #007acc;
+}
+
+a:visited {
+	color: #007acc;
+}

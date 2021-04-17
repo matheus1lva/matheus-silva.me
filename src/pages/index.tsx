@@ -1,12 +1,14 @@
 import Layout from '../components/Layout'
-import { getAllPosts } from '../lib/api'
-import Link from 'next/link'
-import Post from '../types/post'
+import { getAllPosts } from '../../lib/api'
+import {Link} from '../components/Link'
+import Post from '../../types/post'
 import { rhythm } from '../components/utils/typography'
 import { format } from 'date-fns';
-// custom typefaces
-import "typeface-montserrat"
-import "typeface-merriweather"
+import styled from 'styled-components';
+
+const PostTitle = styled(Link)`
+  text-decoration: underline;
+`;
 
 interface Props {
   allPosts: Post[];
@@ -26,10 +28,10 @@ const Index = (props: Props) => {
                 style={{
                   marginBottom: rhythm(1 / 4),
                 }}
-              >
-                <Link href={`/posts/${post.slug}`}>
+              > 
+                <PostTitle href={`/posts/${post.slug}`} className="test123">
                   {title}
-                </Link>
+                </PostTitle>
               </h3>
               <small>{format(new Date(post.date), 'yyyy-mm-ddd')}</small>
             </header>

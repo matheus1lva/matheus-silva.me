@@ -1,21 +1,21 @@
 @font-face {
-  font-family: Merriweather;
+  font-family: 'Merriweather';
   src: url('./fonts/Merriweather-Regular.ttf');
 	font-weight: normal;
 }
 
 @font-face {
-  font-family: Merriweather;
+  font-family: 'Merriweather';
   src: url('./fonts/Merriweather-Bold.ttf');
 	font-weight: bold;
 }
 
 @font-face {
-  font-family: Merriweather;
+  font-family: 'Merriweather';
   src: url('./fonts/Merriweather-Italic.ttf');
 	font-style: italic;
 }
 
 * {
-	font-family: Merriweather, Georgia ,serif;
+	font-family: 'Merriweather', Georgia ,serif;
 }

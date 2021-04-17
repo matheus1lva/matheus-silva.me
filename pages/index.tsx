@@ -4,6 +4,9 @@ import Link from 'next/link'
 import Post from '../types/post'
 import { rhythm } from '../components/utils/typography'
 import { format } from 'date-fns';
+// custom typefaces
+import "typeface-montserrat"
+import "typeface-merriweather"
 
 interface Props {
   allPosts: Post[];

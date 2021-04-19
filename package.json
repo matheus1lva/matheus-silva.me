@@ -4,10 +4,18 @@
   "version": "0.1.0",
   "dependencies": {
     "@deckdeckgo/highlight-code": "^1.0.2",
+    "@types/classnames": "^2.2.10",
+    "@types/jest": "^25.2.2",
+    "@types/node": "^14.0.1",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "babel-plugin-styled-components": "latest",
     "classnames": "2.2.6",
     "date-fns": "^2.20.1",
+    "ghooks": "^2.0.4",
     "gray-matter": "4.0.2",
     "next": "latest",
+    "prettier": "^1.19.1",
     "prismjs": "^1.19.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -20,15 +28,7 @@
     "typeface-montserrat": "0.0.75",
     "typescript": "^4.0.3",
     "typography": "^0.16.19",
-    "typography-theme-wordpress-2016": "^0.16.19",
-    "@types/classnames": "^2.2.10",
-    "@types/jest": "^25.2.2",
-    "@types/node": "^14.0.1",
-    "@types/react": "^16.9.35",
-    "@types/react-dom": "^16.9.8",
-    "babel-plugin-styled-components": "latest",
-    "ghooks": "^2.0.4",
-    "prettier": "^1.19.1"
+    "typography-theme-wordpress-2016": "^0.16.19"
   },
   "scripts": {
     "dev": "next dev",
@@ -41,5 +41,8 @@
     "ghooks": {
       "pre-commit": "npm run format && git add ."
     }
+  },
+  "devDependencies": {
+    "html-entities": "^2.3.2"
   }
 }

@@ -33,7 +33,7 @@ const Index = (props: Props) => {
                   {title}
                 </PostTitle>
               </h3>
-              <small>{format(new Date(post.date), 'yyyy-mm-ddd')}</small>
+              <small>{format(new Date(post.date), 'yyyy-MM-dd')}</small>
             </header>
             <section>
               <p>{post.description}</p>

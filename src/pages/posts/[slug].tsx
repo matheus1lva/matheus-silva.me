@@ -9,15 +9,14 @@ import PostType from "../../../types/post"
 import { rhythm, scale } from "../../components/utils/typography"
 import Bio from "../../components/Bio"
 import { format } from 'date-fns';
-
+import {decode } from 'html-entities';
+ 
 type Props = {
   post: PostType
-  morePosts?: PostType[]
-  preview?: boolean
 }
 
 const Post = (props: Props) => {
-  const { post, morePosts, preview } = props;
+  const { post } = props;
 
   const router = useRouter();
 
@@ -53,10 +52,10 @@ const Post = (props: Props) => {
                   marginBottom: rhythm(1),
                 }}
               >
-                {format(new Date(post.date), 'yyyy-mm-dd')}
+                {format(new Date(post.date), 'yyyy-MM-dd')}
               </p>
             </header>
-            <section dangerouslySetInnerHTML={{ __html: post.content }} />
+            <section>{decode(post.content)}</section>
             <hr
               style={{
                 marginBottom: rhythm(1),

@@ -27,9 +27,8 @@ const Bio = () => {
 				className={'image-wrapper'}
 				alt={config.author.name}
 				src={"/profile-pic.jpg"}
-				layout={'fixed'}
 				width={90}
-				height={90}
+				height={70}
 			/>
 			<p>
 				Written by <strong>{config.author.name}</strong> {config.author.summary}

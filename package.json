@@ -31,7 +31,7 @@
     "prettier": "^1.19.1"
   },
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc",

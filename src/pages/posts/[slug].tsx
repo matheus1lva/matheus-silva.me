@@ -9,7 +9,6 @@ import PostType from "../../../types/post"
 import { rhythm, scale } from "../../components/utils/typography"
 import Bio from "../../components/Bio"
 import { format } from 'date-fns';
-import {decode } from 'html-entities';
  
 type Props = {
   post: PostType
@@ -55,7 +54,7 @@ const Post = (props: Props) => {
                 {format(new Date(post.date), 'yyyy-MM-dd')}
               </p>
             </header>
-            <section>{decode(post.content)}</section>
+            <section dangerouslySetInnerHTML={{__html: post.content}} />
             <hr
               style={{
                 marginBottom: rhythm(1),

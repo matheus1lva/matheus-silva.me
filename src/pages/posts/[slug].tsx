@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useRouter } from "next/router"
 import ErrorPage from "next/error"
 import Layout from "../../components/Layout"
@@ -9,6 +10,10 @@ import PostType from "../../../types/post"
 import { rhythm, scale } from "../../components/utils/typography"
 import Bio from "../../components/Bio"
 import { format } from 'date-fns';
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from 'rehype-raw'
+import Image from 'next/image';
+import styled from 'styled-components';
  
 type Props = {
   post: PostType
@@ -53,8 +58,28 @@ const Post = (props: Props) => {
               >
                 {format(new Date(post.date), 'yyyy-MM-dd')}
               </p>
-            </header>
-            <section dangerouslySetInnerHTML={{__html: post.content}} />
+              </header>
+              <ReactMarkdown
+                rehypePlugins={[rehypeRaw]}
+                components={{
+                  image: node => {
+                    const img = node.src as string;
+                    const alt = node.alt as string;
+                    return <Image src={img} alt={alt} layout="fill" />
+                  },
+                  p: (paragraph) => {
+                    const { node } = paragraph;
+                    if (node.children[0].tagName === "img") {
+                      const image = node.children[0].properties;
+                      return <img src={image.src} alt={image.alt} style={{ width: '100%' }}/>;
+                    }
+                
+                    return <p>{paragraph.children}</p>;
+                  },
+                }}
+              >
+                {post.content}
+              </ReactMarkdown>
             <hr
               style={{
                 marginBottom: rhythm(1),
@@ -89,6 +114,7 @@ export async function getStaticProps({ params }: Params) {
     "coverImage",
   ])
   const content = await markdownToHtml(post.content || "")
+
 
   return {
     props: {

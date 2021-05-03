@@ -6,7 +6,7 @@ description: Reducing the size of `node_modules`
 
 We all know how `node_modules` has this bad reputation of being heavier than the size of earth, or even the sun!
 
-![node meme](./meme.jpg "Node modules meme")
+![node meme](/assets/blog/meme.jpg)
 
 Node package system is a weird ecosystem, it has not so good documentation and there are multiple ways of doing things that we never know which one is the correct!
 I'm an example of someone that was completely overwhelmed by the documentation and when i published my package I didn't know the correct way to do that! Many people don't know either and we end up having things like this

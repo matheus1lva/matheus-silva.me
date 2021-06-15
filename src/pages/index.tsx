@@ -5,6 +5,8 @@ import Post from '../../types/post'
 import { rhythm } from '../components/utils/typography'
 import { format } from 'date-fns';
 import styled from 'styled-components';
+import { getDatabase } from '../../lib/notion'
+const databaseId = 'a5eb7564fba845e190095688c9b3e6a8';
 
 const PostTitle = styled(Link)`
   text-decoration: underline;
@@ -16,10 +18,34 @@ interface Props {
 }
 
 const Index = (props: Props) => {
-  const { allPosts } = props;
+  // @ts-ignore
+  const { posts } = props;
+  console.log(posts)
   return (
     <Layout>
-      {allPosts.map((post) => {
+      <h1>hi</h1>
+      {posts.map((post) => {
+            const date = new Date(post.last_edited_time).toLocaleString(
+              "en-US",
+              {
+                month: "short",
+                day: "2-digit",
+                year: "numeric",
+              }
+            );
+            return (
+              <li key={post.id}>
+                  <Link href={`/${post.id}`}>
+                  <span>{post.properties.Name.title[0].plain_text}</span>
+                  </Link>
+
+                <Link href={`/${post.id}`}>
+                  <a> Read post →</a>
+                </Link>
+              </li>
+            );
+          })}
+      {/* {allPosts.map((post) => {
         const title = post.title;
         return (
           <article key={post.slug}>
@@ -40,7 +66,7 @@ const Index = (props: Props) => {
             </section>
           </article>
         )
-      })}
+      })} */}
     </Layout>
   )
 }
@@ -48,16 +74,12 @@ const Index = (props: Props) => {
 export default Index
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'description',
-  ])
+  const database = await getDatabase(databaseId);
 
   return {
-    props: { allPosts },
-  }
-}
+    props: {
+      posts: database,
+    },
+    revalidate: 1,
+  };
+};

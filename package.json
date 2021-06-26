@@ -48,6 +48,7 @@
     }
   },
   "devDependencies": {
-    "html-entities": "^2.3.2"
+    "html-entities": "^2.3.2",
+    "react-icons": "^4.2.0"
   }
 }

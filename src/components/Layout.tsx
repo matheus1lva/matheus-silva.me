@@ -1,24 +1,40 @@
 import React from "react"
 import Header from "./Header"
 import Bio from './Bio';
-import { rhythm } from "./utils/typography"
+import { rhythm as rh} from "./utils/typography"
+import styled from "styled-components";
+
+const Footer = styled.footer`
+  margin-top:30px;
+  display: flex;
+  justify-content: center;
+`;
+
+const Body = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  max-width: ${() => {
+    return rh(24)
+  }};
+  padding: ${() => {
+   return `${rh(1.5)} ${rh(3 / 4)}`;
+  }};
+`;
+
+const Children = styled.div`
+  margin-top: 30px;
+  font-family: Montserrat;
+`;
 
 const Layout = (props: React.PropsWithChildren<{}>) => {
   const { children } = props;
   return (
-    <div
-      style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-        maxWidth: rhythm(24),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-      }}
-    >
+    <Body>
       <Header />
       <Bio />
-      <main>{children}</main>
-      <footer>Matheus Silva - Made with love with Gatsby {"<"}3</footer>
-    </div>
+      <Children>{children}</Children>
+      <Footer>Matheus Silva - Made with Next.js {"<"}3</Footer>
+    </Body>
   )
 }
 

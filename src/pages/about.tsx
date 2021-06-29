@@ -2,6 +2,8 @@ import React from "react"
 import Layout from "../components/Layout"
 import styled from "styled-components"
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
+import {Helmet} from "react-helmet";
+
 
 const Title = styled.h4`
   margin: 0;
@@ -9,6 +11,10 @@ const Title = styled.h4`
 
 const ContentWithNoMargin = styled.p`
   margin: 0;
+`
+
+const Justified = styled.div`
+  text-align: justify;
 `
 
 const SocialsWrapper = styled.div`
@@ -24,7 +30,10 @@ const ExperiencesBlock = styled.div`
 const AboutPage = () => {
   return (
     <Layout>
-      <div>
+      <Helmet>
+        <title>Matheus Silva - About</title>
+      </Helmet>
+      <Justified>
         <div>
           <h3>Who am i</h3>
           <p>
@@ -113,24 +122,26 @@ const AboutPage = () => {
                 system on this project and influence the rest of the team with
                 other projects. I've been going through lots of projects where
                 my main goal is always to become the main person there! I want
-                to be the very best and help everyone as their needs! I have
-                also the experience to manage products, deal with blockers
-                between teams, and manage stakeholders' expectations. I've been
-                having the role of project management, project leader, and also
-                Tech lead! I want to add the most value as possible to the
-                products! Recently in cooperation with Paulo Campelo Selano, we
-                introduced a design system based on the atomic design, to create
-                shared components across other portals and products to keep the
-                same/similar visual identity and increase the development speed!
-                The whole design system is being developed and built on top of a
-                monorepo architecture (with Lerna + yarn), where each component
-                is a folder and independent from the others, but they all share
-                common dependencies and have a common release flow! Each of the
-                components is built with styled-components, to allow theme
-                customization and decrease the chances of class name collision!
-                Now that the project is in a stable state, new developers are
-                coming in to integrate and create other components for their own
-                requirements!
+                to be the very best and help everyone as their needs!
+              </p>
+              <p>
+                I have also the experience to manage products, deal with
+                blockers between teams, and manage stakeholders' expectations.
+                I've been having the role of project management, project leader,
+                and also Tech lead! I want to add the most value as possible to
+                the products! Recently in cooperation with Paulo Campelo Selano,
+                we introduced a design system based on the atomic design, to
+                create shared components across other portals and products to
+                keep the same/similar visual identity and increase the
+                development speed! The whole design system is being developed
+                and built on top of a monorepo architecture (with Lerna + yarn),
+                where each component is a folder and independent from the
+                others, but they all share common dependencies and have a common
+                release flow! Each of the components is built with
+                styled-components, to allow theme customization and decrease the
+                chances of class name collision! Now that the project is in a
+                stable state, new developers are coming in to integrate and
+                create other components for their own requirements!
               </p>
             </ContentWithNoMargin>
           </ExperiencesBlock>
@@ -152,7 +163,6 @@ const AboutPage = () => {
                 client, gathering requirements to deliverying.
               </p>
               <p>
-                {" "}
                 Then i moved to the frontend team, which i was able to learn
                 really fast how to actually use react and redux, redux-sagas and
                 redux-form. Within a month there, i was able to get a project to
@@ -177,7 +187,7 @@ const AboutPage = () => {
             </ContentWithNoMargin>
           </ExperiencesBlock>
         </div>
-      </div>
+      </Justified>
     </Layout>
   )
 }

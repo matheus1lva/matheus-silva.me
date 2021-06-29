@@ -8,6 +8,10 @@ const Wrapper = styled.div`
 	display: flex;
 	> div:first-child {
 		margin-right: 20px !important;
+		@media(max-width: 400px) {
+			width: 400px !important;
+    	height: 112px !important;
+		}
 	}
 
 	p {

@@ -8,9 +8,17 @@ const Wrapper = styled.div`
 	display: flex;
 	> div:first-child {
 		margin-right: 20px !important;
-		@media(max-width: 400px) {
+		@media(max-width: 630px) and (min-width: 500px) {
+			width: 200px !important;
+		}
+
+		@media (max-width: 499px) and (min-width: 411px) {
+			width: 300px !important;
+		}
+
+		@media(max-width: 410px) {
 			width: 400px !important;
-    	height: 112px !important;
+
 		}
 	}
 

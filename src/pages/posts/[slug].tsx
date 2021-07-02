@@ -1,19 +1,11 @@
-// @ts-nocheck
 import { useRouter } from "next/router"
 import ErrorPage from "next/error"
 import Layout from "../../components/Layout"
-import { getPostBySlug, getAllPosts } from "../../../lib/api"
 import Head from "next/head"
-import { CMS_NAME } from "../../../lib/constants"
-import markdownToHtml from "../../../lib/markdownToHtml"
 import PostType from "../../../types/post"
 import { rhythm, scale } from "../../components/utils/typography"
 import Bio from "../../components/Bio"
 import { format } from "date-fns"
-import ReactMarkdown from "react-markdown"
-import rehypeRaw from "rehype-raw"
-import Image from "next/image"
-import styled from "styled-components"
 
 type Props = {
   post: PostType
@@ -54,36 +46,10 @@ const Post = (props: Props) => {
                   marginBottom: rhythm(1),
                 }}
               >
-                {format(new Date(post.date), "yyyy-MM-dd")}
+                {format(new Date(post.published_at), "yyyy-MM-dd")}
               </p>
             </header>
-            <ReactMarkdown
-              rehypePlugins={[rehypeRaw]}
-              components={{
-                image: node => {
-                  const img = node.src as string
-                  const alt = node.alt as string
-                  return <Image src={img} alt={alt} layout="fill" />
-                },
-                p: paragraph => {
-                  const { node } = paragraph
-                  if (node.children[0].tagName === "img") {
-                    const image = node.children[0].properties
-                    return (
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        style={{ width: "100%" }}
-                      />
-                    )
-                  }
-
-                  return <p>{paragraph.children}</p>
-                },
-              }}
-            >
-              {post.content}
-            </ReactMarkdown>
+              <section dangerouslySetInnerHTML={{__html: post.content}} />
             <hr
               style={{
                 marginBottom: rhythm(1),
@@ -108,38 +74,41 @@ type Params = {
 }
 
 export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
-    "title",
-    "date",
-    "slug",
-    "author",
-    "content",
-    "ogImage",
-    "coverImage",
-  ])
-  const content = await markdownToHtml(post.content || "")
+  const slug = params.slug;
+
+  const response = await fetch(`http://strapi-blog-matheus.herokuapp.com/blogs/${slug}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  const result = await response.json();
 
   return {
     props: {
-      post: {
-        ...post,
-        content,
-      },
+      post: result,
     },
+    revalidate: 1
   }
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(["slug"])
+
+  const response = await fetch('http://strapi-blog-matheus.herokuapp.com/blogs', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  const result = await response.json();
 
   return {
-    paths: posts.map(posts => {
-      return {
-        params: {
-          slug: posts.slug,
-        },
-      }
-    }),
+    paths: result.map((article) => ({
+      params: {
+        slug: article.id.toString(),
+      },
+    })),
     fallback: false,
   }
 }

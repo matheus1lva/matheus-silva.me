@@ -17,7 +17,8 @@ interface Props {
 }
 
 const Index = (props: Props) => {
-  const { allPosts } = props
+  const { allPosts } = props;
+  console.log(allPosts);
   return (
     <Layout>
       <Helmet>
@@ -26,18 +27,18 @@ const Index = (props: Props) => {
       {allPosts.map(post => {
         const title = post.title
         return (
-          <article key={post.slug}>
+          <article key={post.id}>
             <header>
               <h3
                 style={{
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <PostTitle href={`/posts/${post.slug}`} className="test123">
+                <PostTitle href={`/posts/${post.id.toString()}`} className="test123">
                   {title}
                 </PostTitle>
               </h3>
-              <small>{format(new Date(post.date), "yyyy-MM-dd")}</small>
+              <small>{format(new Date(post.published_at), "yyyy-MM-dd")}</small>
             </header>
             <section>
               <p>{post.description}</p>
@@ -52,16 +53,15 @@ const Index = (props: Props) => {
 export default Index
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
-    "title",
-    "date",
-    "slug",
-    "author",
-    "coverImage",
-    "description",
-  ])
+  const response = await fetch('http://strapi-blog-matheus.herokuapp.com/blogs', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  const result = await response.json();
 
   return {
-    props: { allPosts },
+    props: { allPosts: result },
   }
 }

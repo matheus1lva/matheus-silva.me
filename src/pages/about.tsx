@@ -2,8 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import styled from "styled-components"
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
-import {Helmet} from "react-helmet";
-
+import { Helmet } from "react-helmet"
 
 const Title = styled.h4`
   margin: 0;
@@ -72,6 +71,22 @@ const AboutPage = () => {
               <FaTwitter size={"25"} />
             </a>
           </SocialsWrapper>
+        </div>
+
+        <div>
+          <h3>Talks</h3>
+
+          <Title>Webpack and the state of bundlers - ReactConfBR</Title>
+
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/yeiT_z1Twt8"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
 
         <div>

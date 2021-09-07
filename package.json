@@ -27,7 +27,7 @@
     "react-typography": "^0.16.19",
     "rehype-raw": "^5.1.0",
     "remark": "11.0.2",
-    "remark-html": "10.0.0",
+    "remark-html": "13.0.2",
     "styled-components": "^5.2.1",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75",

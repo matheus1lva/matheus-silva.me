@@ -24,6 +24,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-markdown": "^6.0.1",
+    "react-syntax-highlighter": "^15.5.0",
     "react-typography": "^0.16.19",
     "rehype-raw": "^5.1.0",
     "remark": "11.0.2",

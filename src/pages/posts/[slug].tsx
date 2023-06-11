@@ -14,6 +14,7 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import Image from "next/image";
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
+import {dark} from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
 import styled from "styled-components";
 
@@ -88,6 +89,7 @@ const Post = (props: Props) => {
                     <SyntaxHighlighter
                       {...props}
                       children={String(children).replace(/\n$/, '')}
+                      style={dark}
                       language={match[1]}
                       PreTag="div"
                     />

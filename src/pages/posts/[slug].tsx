@@ -13,8 +13,8 @@ import { format } from "date-fns";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import Image from "next/image";
-import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import d from "react-syntax-highlighter/dist/cjs/styles/prism/nord";
 
 import styled from "styled-components";
 
@@ -83,13 +83,13 @@ const Post = (props: Props) => {
 
                   return <p>{paragraph.children}</p>;
                 },
-                code({node, inline, className, children, ...props}) {
-                  const match = /language-(\w+)/.exec(className || '')
+                code({ node, inline, className, children, ...props }) {
+                  const match = /language-(\w+)/.exec(className || "");
                   return !inline && match ? (
                     <SyntaxHighlighter
                       {...props}
-                      children={String(children).replace(/\n$/, '')}
-                      style={docco}
+                      children={String(children).replace(/\n$/, "")}
+                      style={d}
                       language={match[1]}
                       PreTag="div"
                     />
@@ -97,8 +97,8 @@ const Post = (props: Props) => {
                     <code {...props} className={className}>
                       {children}
                     </code>
-                  )
-                }
+                  );
+                },
               }}
             >
               {post.content}

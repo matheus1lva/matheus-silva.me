@@ -1,6 +1,6 @@
 ---
 title: React release cycle
-date: "2023-03-8T13:29:00.169Z"
+date: "2020-03-16T05:35:07.322Z"
 ---
 
 React is a popular JavaScript library for building user interfaces. It is maintained by Facebook and a community of developers and companies. React releases new versions regularly, but how does it manage to introduce new features without breaking existing code? In this blog post, we will explain how the React release cycle works and how it ensures stability and compatibility for its users.

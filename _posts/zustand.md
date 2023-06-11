@@ -20,6 +20,7 @@ const useCounterStore = create(set => ({
   count: 0,
   increment: () => set(state => ({ count: state.count + 1 })),
 }))
+
 ```
 
 In this example, we're using the create function to create a store with an initial state of count: 0. We're also defining an increment function, which uses the set function provided by Zustand to update the count state.
@@ -65,6 +66,7 @@ const MyComponent = (props) => {
     // ...
   );
 };
+
 ```
 
 Use useCallback to Memoize Functions
@@ -82,6 +84,7 @@ const MyComponent = (props) => {
     // ...
   );
 };
+
 ```
 
 # Comparing Zustand and Redux Performance

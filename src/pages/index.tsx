@@ -1,30 +1,30 @@
-import Layout from "../components/Layout"
-import { getAllPosts } from "../../lib/api"
-import { Link } from "../components/Link"
-import Post from "../../types/post"
-import { rhythm } from "../components/utils/typography"
-import { format } from "date-fns"
-import styled from "styled-components"
-import { Helmet } from "react-helmet"
+import Layout from "../components/Layout";
+import { getAllPosts } from "../../lib/api";
+import { Link } from "../components/Link";
+import Post from "../../types/post";
+import { rhythm } from "../components/utils/typography";
+import { format } from "date-fns";
+import styled from "styled-components";
+import { Helmet } from "react-helmet";
 
 const PostTitle = styled(Link)`
   text-decoration: underline;
-`
+`;
 
 interface Props {
-  allPosts: Post[]
-  children: React.ReactNode
+  allPosts: Post[];
+  children: React.ReactNode;
 }
 
 const Index = (props: Props) => {
-  const { allPosts } = props
+  const { allPosts } = props;
   return (
     <Layout>
       <Helmet>
         <title>Matheus Silva</title>
       </Helmet>
-      {allPosts.map(post => {
-        const title = post.title
+      {allPosts.map((post) => {
+        const title = post.title;
         return (
           <article key={post.slug}>
             <header>
@@ -37,19 +37,19 @@ const Index = (props: Props) => {
                   {title}
                 </PostTitle>
               </h3>
-              <small>{format(new Date(post.date), "yyyy-MM-dd")}</small>
+              {/* <small>{format(new Date(post.date), "yyyy-MM-dd")}</small> */}
             </header>
             <section>
               <p>{post.description}</p>
             </section>
           </article>
-        )
+        );
       })}
     </Layout>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;
 
 export const getStaticProps = async () => {
   const allPosts = getAllPosts([
@@ -59,9 +59,9 @@ export const getStaticProps = async () => {
     "author",
     "coverImage",
     "description",
-  ])
+  ]);
 
   return {
     props: { allPosts },
-  }
-}
+  };
+};

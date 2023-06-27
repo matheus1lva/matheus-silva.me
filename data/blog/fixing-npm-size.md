@@ -1,6 +1,6 @@
 ---
 title: Saving 1TB in Javascript
-date: "2020-05-23T13:29:00.169Z"
+date: '2020-05-23T13:29:00.169Z'
 description: Reducing the size of `node_modules`
 ---
 
@@ -11,7 +11,7 @@ We all know how `node_modules` has this bad reputation of being heavier than the
 Node package system is a weird ecosystem, it has not so good documentation and there are multiple ways of doing things that we never know which one is the correct!
 I'm an example of someone that was completely overwhelmed by the documentation and when i published my package I didn't know the correct way to do that! Many people don't know either and we end up having things like this
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">what is your biggest node_modules?<br><br>mine has 2GB <a href="https://t.co/Xx1pWnJ8eq">pic.twitter.com/Xx1pWnJ8eq</a></p>&mdash; Sibelius Seraphini (@sseraphini) <a href="https://twitter.com/sseraphini/status/1262415141905235968?ref_src=twsrc%5Etfw">May 18, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">what is your biggest node_modules?<br/><br/>mine has 2GB <a href="https://t.co/Xx1pWnJ8eq">pic.twitter.com/Xx1pWnJ8eq</a></p>&mdash; Sibelius Seraphini (@sseraphini) <a href="https://twitter.com/sseraphini/status/1262415141905235968?ref_src=twsrc%5Etfw">May 18, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 As sibelius posted the other day on twitter, a 2GB `node_modules`, are you crazy????
 we can save up on space using small libraries, libraries that have fewer files, fewer dependencies, etc. But do the original authors know they are doing it wrong?? Mostly don't!

@@ -1,6 +1,6 @@
 ---
 title: My first talk ever!
-date: "2020-05-12T22:00:00.169Z"
+date: '2020-05-12T22:00:00.169Z'
 description: how was doing my first talk from introvert to a speaker?
 ---
 
@@ -12,7 +12,7 @@ I was as any developer an introvert (and on my core, I'm still one) and didn't l
 
 But how did I manage to do it?
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Something i&#39;ve set as a goal to myself this year is, I WANT TO GIVE A TALK!<br>I had always been someone introvert and shy and this is changing this year. The act of giving a talk in front of tens of people is going to cement my old self, and bring my new to the surface!</p>&mdash; Matheus Silva (@matheus1lva) <a href="https://twitter.com/matheus1lva/status/1090624740228849665?ref_src=twsrc%5Etfw">January 30, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Something i&#39;ve set as a goal to myself this year is, I WANT TO GIVE A TALK!<br/>I had always been someone introvert and shy and this is changing this year. The act of giving a talk in front of tens of people is going to cement my old self, and bring my new to the surface!</p>&mdash; Matheus Silva (@matheus1lva) <a href="https://twitter.com/matheus1lva/status/1090624740228849665?ref_src=twsrc%5Etfw">January 30, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 On January 30, 2019, I twitted this out, which was sort of a promise for myself!
 

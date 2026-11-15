@@ -1,6 +1,5 @@
 const fs = require('fs')
 const path = require('path')
-const inquirer = require('inquirer')
 const dedent = require('dedent')
 
 const root = process.cwd()
@@ -52,53 +51,55 @@ const genFrontMatter = (answers) => {
   return frontMatter
 }
 
-inquirer
-  .prompt([
-    {
-      name: 'title',
-      message: 'Enter post title:',
-      type: 'input',
-    },
-    {
-      name: 'extension',
-      message: 'Choose post extension:',
-      type: 'list',
-      choices: ['mdx', 'md'],
-    },
-    {
-      name: 'authors',
-      message: 'Choose authors:',
-      type: 'checkbox',
-      choices: getAuthors,
-    },
-    {
-      name: 'summary',
-      message: 'Enter post summary:',
-      type: 'input',
-    },
-    {
-      name: 'draft',
-      message: 'Set post as draft?',
-      type: 'list',
-      choices: ['yes', 'no'],
-    },
-    {
-      name: 'tags',
-      message: 'Any Tags? Separate them with , or leave empty if no tags.',
-      type: 'input',
-    },
-    {
-      name: 'layout',
-      message: 'Select layout',
-      type: 'list',
-      choices: getLayouts,
-    },
-    {
-      name: 'canonicalUrl',
-      message: 'Enter canonical url:',
-      type: 'input',
-    },
-  ])
+import('inquirer')
+  .then(({ default: inquirer }) =>
+    inquirer.prompt([
+      {
+        name: 'title',
+        message: 'Enter post title:',
+        type: 'input',
+      },
+      {
+        name: 'extension',
+        message: 'Choose post extension:',
+        type: 'list',
+        choices: ['mdx', 'md'],
+      },
+      {
+        name: 'authors',
+        message: 'Choose authors:',
+        type: 'checkbox',
+        choices: getAuthors(),
+      },
+      {
+        name: 'summary',
+        message: 'Enter post summary:',
+        type: 'input',
+      },
+      {
+        name: 'draft',
+        message: 'Set post as draft?',
+        type: 'list',
+        choices: ['yes', 'no'],
+      },
+      {
+        name: 'tags',
+        message: 'Any Tags? Separate them with , or leave empty if no tags.',
+        type: 'input',
+      },
+      {
+        name: 'layout',
+        message: 'Select layout',
+        type: 'list',
+        choices: getLayouts(),
+      },
+      {
+        name: 'canonicalUrl',
+        message: 'Enter canonical url:',
+        type: 'input',
+      },
+    ])
+  )
   .then((answers) => {
     // Remove special characters and replace space with -
     const fileName = answers.title

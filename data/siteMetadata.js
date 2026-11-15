@@ -2,11 +2,14 @@ const siteMetadata = {
   title: 'Matheus Silva',
   author: 'Matheus Silva',
   headerTitle: 'Matheus Silva',
-  description: '',
+  description: 'Software engineer writing about frontend tooling, bundlers, React and web3.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://matheus-silva.com',
-  image: '/static/images/avatar.png',
+  image: '/static/images/avatar.jpg',
+  github: 'https://github.com/matheus1lva',
+  linkedin: 'https://www.linkedin.com/in/matheusgsilva',
+  twitter: 'https://twitter.com/matheus1lva',
   socialBanner: '/static/images/twitter-card.png',
   locale: 'en-US',
   analytics: {
@@ -22,7 +25,7 @@ const siteMetadata = {
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
     // Please add your .env file and modify it according to your selection
-    provider: 'buttondown',
+    provider: '',
   },
   comment: {
     // If you want to use a commenting system other than giscus you have to add it to the

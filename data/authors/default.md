@@ -19,7 +19,7 @@ Apart from tech i'm also into crypto, including defi, yield farm, and everything
 
 ## Socials
 
-[GitHub](https://www.github.com/PlayMa256)
+[GitHub](https://github.com/matheus1lva)
 [LinkedIn](https://www.linkedin.com/in/matheusgsilva)
 [Twitter](https://twitter.com/matheus1lva)
 
@@ -29,32 +29,6 @@ Apart from tech i'm also into crypto, including defi, yield farm, and everything
 
 **Embed YouTube video not possible in markdown**
 
-## Education
+## Resume
 
-### State University of Campinas
-
-Bachelor on Systems information - 2013
-
-## Experiences
-
-### Software Developer - Ifood
-
-I'm working primarily on the main website, particularly on the checkout and payment section. Performing frontend development and doing an end to end deployment on different staging platforms (from staging to production).
-
-Predominantly my job is to help the product to scale, with multiple teams coding into the same project, it is my job to create, modify and add ways to scale the product better, adding security updates; improving DX and updating the continuously deployment that already exists.
-
-### Software Developer - Daitan
-
-Working primarily as a frontend developer, but doing work not related to the frontend, such as DevOps (deploying applications with docker), configuring Jenkins pipelines, debugging java code (spring-boot and apache camel).
-
-(Additional content not included due to length.)
-
-### Intern Software developer - Daitan
-
-During the internship i was able to get in touch with what the market was using in terms of tech, before that i had just read about, some of the techs i had never touched.
-
-(Additional content not included due to length.)
-
-### Freelancer
-
-Working as a freelance for various clients, I was able to build and improve some skills: self-taught; self-management; manage time correctly; communication skills; time measuring; estimate projects correctly. I worked with a basic stack a the time being it: PHP, HTML, Mysql, Postgres, MongoDB, jquery
+See the full [resume](/resume).

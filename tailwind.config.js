@@ -25,11 +25,11 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
+        sans: ['Inter Variable', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: colors.teal,
-        gray: colors.neutral,
+        primary: colors.indigo,
+        gray: colors.zinc,
       },
       typography: (theme) => ({
         DEFAULT: {

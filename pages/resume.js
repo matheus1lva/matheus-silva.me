@@ -45,9 +45,13 @@ export default function Resume() {
           <ol className="space-y-8">
             {resume.experience.map((job) => (
               <li key={job.role + job.company} className="break-inside-avoid">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-                  {job.role} <span className="font-normal text-gray-500">· {job.company}</span>
-                </h3>
+                <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+                    {job.role} <span className="font-normal text-gray-500">· {job.company}</span>
+                  </h3>
+                  <span className="text-sm text-gray-500 dark:text-gray-400">{job.period}</span>
+                </div>
+                {job.intro && <p className="mt-2 text-gray-700 dark:text-gray-300">{job.intro}</p>}
                 <ul className="mt-2 list-disc space-y-1 pl-5 text-gray-700 dark:text-gray-300">
                   {job.points.map((p) => (
                     <li key={p}>{p}</li>

@@ -1,7 +1,7 @@
 ---
 name: Matheus Silva
 avatar: /static/images/avatar.jpg
-occupation: Software Developer
+occupation: Staff Software Engineer
 twitter: https://twitter.com/matheus1lva
 linkedin: https://www.linkedin.com/in/matheusgsilva/
 github: https://github.com/matheus1lva
